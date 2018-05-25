@@ -2,7 +2,7 @@ import msgpack
 from io import BytesIO
 
 import logging
-from fluent import handler
+from fluent import asynchandler as handler
 
 def overflow_handler(pendings):
     unpacker = msgpack.Unpacker(BytesIO(pendings))
